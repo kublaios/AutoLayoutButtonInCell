@@ -17,7 +17,7 @@
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="34" id="7Jf-N7-Bhy"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="7Jf-N7-Bhy"/>
                         </constraints>
                         <state key="normal" title="Button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

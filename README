@@ -1,0 +1,3 @@
+Sample for setting dynamic cell heights with autolayout that each contains a multilined UIButton. This sample is uploaded for SO question and is buggy.  
+  
+SO question link: http://stackoverflow.com/questions/31132045/settings-uitableviewcell-heights-with-multiline-uibuttons-in-auto-layout

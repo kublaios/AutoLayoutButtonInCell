@@ -56,6 +56,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView?.registerNib(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
+        self.tableView?.rowHeight = UITableViewAutomaticDimension
+        self.tableView?.estimatedRowHeight = 160
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,6 +78,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // UITableViewDelegate
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        var cell = tableView.dequeueReusableCellWithIdentifier("CustomCell") as! CustomCell
+        cell.myButton?.setTitle(self.data[indexPath.row], forState: UIControlState.Normal)
+        
+        cell.bounds = CGRectMake(0, 0, CGRectGetWidth(tableView.bounds), CGRectGetHeight(cell.bounds))
+        cell.setNeedsLayout()
+        cell.layoutIfNeeded()
+        
+        return cell.myButton!.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height + (cell.topMarginConstraint!.constant * 2) /* top-bottom margins */ + 1 /* separator height */
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         var cell = tableView.dequeueReusableCellWithIdentifier("CustomCell") as! CustomCell
         cell.myButton?.setTitle(self.data[indexPath.row], forState: UIControlState.Normal)
         
