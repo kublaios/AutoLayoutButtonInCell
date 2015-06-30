@@ -15,6 +15,7 @@
 		3ECC3D3F1B4267AF00061BB2 /* AutoLayoutButtonInCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC3D3E1B4267AF00061BB2 /* AutoLayoutButtonInCellTests.swift */; };
 		3ECC3D491B4267FA00061BB2 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ECC3D481B4267FA00061BB2 /* CustomCell.xib */; };
 		3ECC3D4B1B42682C00061BB2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECC3D4A1B42682C00061BB2 /* CustomCell.swift */; };
+		B28FF4F288C73EC051AAE66D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCB89B762E08052119F31C0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32CD8258B10F47CC8EBD50E9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3E4F3BFE1B42C219004DE0D3 /* AutoLayoutButtonInCell-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoLayoutButtonInCell-BridgingHeader.h"; sourceTree = "<group>"; };
 		3ECC3D231B4267AE00061BB2 /* AutoLayoutButtonInCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutButtonInCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECC3D271B4267AE00061BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ECC3D281B4267AE00061BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,8 @@
 		3ECC3D3E1B4267AF00061BB2 /* AutoLayoutButtonInCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutButtonInCellTests.swift; sourceTree = "<group>"; };
 		3ECC3D481B4267FA00061BB2 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		3ECC3D4A1B42682C00061BB2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		5CCB89B762E08052119F31C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C40A8E2096374C7919FC069F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28FF4F288C73EC051AAE66D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 				3ECC3D251B4267AE00061BB2 /* AutoLayoutButtonInCell */,
 				3ECC3D3B1B4267AF00061BB2 /* AutoLayoutButtonInCellTests */,
 				3ECC3D241B4267AE00061BB2 /* Products */,
+				65119BF1616F0A4BD07D4361 /* Pods */,
+				F896D62894F95D175F07B082 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3ECC3D271B4267AE00061BB2 /* Info.plist */,
+				3E4F3BFE1B42C219004DE0D3 /* AutoLayoutButtonInCell-BridgingHeader.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -118,6 +127,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		65119BF1616F0A4BD07D4361 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C40A8E2096374C7919FC069F /* Pods.debug.xcconfig */,
+				32CD8258B10F47CC8EBD50E9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F896D62894F95D175F07B082 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CCB89B762E08052119F31C0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ECC3D421B4267AF00061BB2 /* Build configuration list for PBXNativeTarget "AutoLayoutButtonInCell" */;
 			buildPhases = (
+				1551F846A8631BB09E3BE480 /* Check Pods Manifest.lock */,
 				3ECC3D1F1B4267AE00061BB2 /* Sources */,
 				3ECC3D201B4267AE00061BB2 /* Frameworks */,
 				3ECC3D211B4267AE00061BB2 /* Resources */,
+				90A6ABF24A85550B3C1BC956 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +241,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1551F846A8631BB09E3BE480 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90A6ABF24A85550B3C1BC956 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ECC3D1F1B4267AE00061BB2 /* Sources */ = {
@@ -346,21 +407,25 @@
 		};
 		3ECC3D431B4267AF00061BB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C40A8E2096374C7919FC069F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutButtonInCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoLayoutButtonInCell/AutoLayoutButtonInCell-BridgingHeader.h";
 			};
 			name = Debug;
 		};
 		3ECC3D441B4267AF00061BB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32CD8258B10F47CC8EBD50E9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutButtonInCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoLayoutButtonInCell/AutoLayoutButtonInCell-BridgingHeader.h";
 			};
 			name = Release;
 		};
@@ -417,6 +482,7 @@
 				3ECC3D441B4267AF00061BB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3ECC3D451B4267AF00061BB2 /* Build configuration list for PBXNativeTarget "AutoLayoutButtonInCellTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +491,7 @@
 				3ECC3D471B4267AF00061BB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

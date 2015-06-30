@@ -12,7 +12,6 @@ import UIKit
 class CustomCell: UITableViewCell {
     
     @IBOutlet weak var myButton: UIButton?
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint?
     @IBOutlet weak var topMarginConstraint: NSLayoutConstraint?
     
     override func awakeFromNib() {
@@ -21,10 +20,10 @@ class CustomCell: UITableViewCell {
         self.myButton?.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override func updateConstraints() {
         self.myButton?.layoutIfNeeded()
-        self.heightConstraint?.constant = self.myButton!.titleLabel!.frame.size.height
+        self.myButton?.titleLabel?.preferredMaxLayoutWidth = self.myButton!.titleLabel!.frame.size.width
+        super.updateConstraints()
     }
     
 }
